@@ -1,0 +1,41 @@
+$primary: #222222;
+$secondary: #737373;
+$techitOrange: #e67800;
+$complete: #059669;
+$ing: #1d4ed8;
+$end: #3f3f46;
+$border: #d4d4d4;
+
+%maxWidth {
+  max-width: 1280px;
+  margin: auto;
+}
+
+button {
+  border: 0;
+  background-color: white;
+}
+
+@mixin responsive($device) {
+  @if $device == "pc" {
+    @media (min-width: $pc) {
+      @content;
+    }
+  }
+}
+
+@mixin responsive($device) {
+  @if $device == "tablet" {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $device == "laptop" {
+    @media (min-width: $laptop) {
+      @content;
+    }
+  } @else if $device == "pc" {
+    @media (min-width: $pc) {
+      @content;
+    }
+  }
+}
